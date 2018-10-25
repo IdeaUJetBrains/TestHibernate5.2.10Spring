@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TestHibernate5.2.10Spring.iml" filepath="$PROJECT_DIR$/TestHibernate5.2.10Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestHibernateSpring.iml" filepath="$PROJECT_DIR$/TestHibernateSpring.iml" />
     </modules>
   </component>
 </project>

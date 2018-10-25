@@ -1,0 +1,13 @@
+# Datasource local storage ignored files
+..\:/Users/Olga Pavlova/IdeaProjects/ALL_TEST_DB_HIBERNATE_AND_JPA_PROJECTS/testProjects_Hibernate_Spring/TestHibernate5.2.10Spring/.idea/dataSources
+dataSources.local.xml
+
+# Editor-based HTTP Client requests
+http-client.private.env.json
+..\:/Users/Olga Pavlova/IdeaProjects/ALL_TEST_DB_HIBERNATE_AND_JPA_PROJECTS/testProjects_Hibernate_Spring/TestHibernate5.2.10Spring/.idea/httpRequests
+rest-client.private.env.json
+
+# Default ignored files
+..\:/Users/Olga Pavlova/IdeaProjects/ALL_TEST_DB_HIBERNATE_AND_JPA_PROJECTS/testProjects_Hibernate_Spring/TestHibernate5.2.10Spring/.idea/shelf
+.idea/workspace.xml
+..\:/Users/Olga Pavlova/IdeaProjects/ALL_TEST_DB_HIBERNATE_AND_JPA_PROJECTS/testProjects_Hibernate_Spring/TestHibernate5.2.10Spring/target
