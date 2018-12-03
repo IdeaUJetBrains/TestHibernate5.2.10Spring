@@ -14,10 +14,18 @@ import javax.persistence.Table;
 @Table(name = "ENTITYBUS")
 //@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE, region = "entity.Entitybus")
 public class Entitybus {
+
     private int eid;
 
     private String enumber;
 
+    public Entitybus() {
+        //Default constructor needed for JPA.
+    }
+    public Entitybus(Integer eid, String enumber) {
+        this.eid = eid;
+        this.enumber = enumber;
+    }
     @Id
     @Column(name = "EID", nullable = false)
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE, region = "entity.Entitybus")
@@ -57,5 +65,10 @@ public class Entitybus {
         int result = eid;
         result = 31 * result + (enumber != null ? enumber.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Product [id=" + eid + ", name=" + enumber + "]";
     }
 }

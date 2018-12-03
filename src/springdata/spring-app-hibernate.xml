@@ -25,8 +25,8 @@
                 <!--<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>-->
                 <prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect</prop>
                 <!--<prop key="hibernate.dialect">${hibernate.dialect}</prop>-->
-                <!--<prop key="hibernate.physical_naming_strategy">newutil.LegacyPhysicalNamingStrategy</prop>-->
-                <prop key="hibernate.implicit_naming_strategy">newutil.MyImplicitNamingStrategy</prop>
+                <prop key="physical_naming_strategy">newutil.LegacyPhysicalNamingStrategy</prop>
+                <!--<prop key="hibernate.implicit_naming_strategy">newutil.MyImplicitNamingStrategy</prop>-->
 
             </props>
         </property>
@@ -44,6 +44,8 @@
           class="org.springframework.orm.hibernate5.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
+
+
 
 
 </beans>

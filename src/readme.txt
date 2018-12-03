@@ -2,7 +2,8 @@ Hibernate, Spring
 
 Naming strategies: CustomNamingStrategy.class
 Persistence view: sessionFactory, entityManagerFactory
-CREATE DB source: dbdata.txt
+CREATE DB source using URL:  jdbc:hsqldb:file:~/db/DB: hsqldb_dbdata.txt
+and username=sa, password=empty
 
 TESTING:
 
@@ -18,4 +19,7 @@ JPAConsole:
 
 Check Hibernate Console from JPA unit.
 
+If at least one java run configuration with java props created,
+we should create a java app configuration for console, point in "VM options":
+--add-modules java.xml.bind
 

@@ -1,10 +1,15 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/data/jpa
+        http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
     <context:property-placeholder location="classpath:springdata/hsqldb.properties" />
+    <context:component-scan base-package="entity, repository, service" />
+    <jpa:repositories base-package="repository" />
+    <context:annotation-config />
 
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -17,15 +22,15 @@
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
           p:dataSource-ref="dataSource">
 
-        <!--<property name="mappingResources" value="orm/Bus.xml"/>-->
+        <!--<property name="mappingResources" value="orm_my/Bus.xml"/>-->
 
-       <!-- <property name="mappingResources">
+       <property name="mappingResources">
             <list>
-                <value>orm/Bus.xml</value>
-                <value>orm/Bus2.xml</value>
-                <value>META-INF/orm.xml</value>
+                <!--<value>orm_my/Bus.xml</value>-->
+                <!--<value>orm_my/Bus2.xml</value>-->
+                <value>META-INF/bus.xml</value>
             </list>
-        </property>-->
+        </property>
 
         <property name="packagesToScan" value="entity" />
 
@@ -34,7 +39,8 @@
                 <entry key="hibernate.dialect" value="${hibernate.dialect}" />
                 <!--<entry key="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" />-->
                 <!--<entry key="hibernate.implicit_naming_strategy" value="newutil.MyImplicitNamingStrategy" />-->
-                <entry key="hibernate.physical_naming_strategy" value="newutil.LegacyPhysicalNamingStrategy" />
+                <!--<entry key="hibernate.implicit_naming_strategy" value="newutil.SampleEntity_MyImplicitNamingStrategy" />-->
+                <!--<entry key="hibernate.physical_naming_strategy" value="newutil.LegacyPhysicalNamingStrategy" />-->
 
                 <entry key="hibernate.cache.region.factory_class" value="org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory"/>
                 <entry key="hibernate.cache.use_second_level_cache" value="true"/>

@@ -10,8 +10,5 @@
         <module name="TestHibernateSpring" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="TestHibernateSpring" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>

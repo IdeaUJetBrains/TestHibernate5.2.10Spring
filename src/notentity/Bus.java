@@ -7,6 +7,11 @@ public class Bus {
     public Bus() {
     }
 
+    public Bus(Integer id, String number) {
+        this.id= id;
+        this.number = number;
+    }
+
     public int getId() {
         return id;
     }
